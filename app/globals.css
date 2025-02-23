@@ -1,21 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-sm: 600px;
+
+  --color-dr-white: #fbfbfb;
+  --color-dr-black: #101720;
+  --color-dr-yellow: #FFB200;
 }
 
-@media (prefers-color-scheme: dark) {
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background:  var(--color-dr-white);
+    --color-foreground:  var(--color-dr-black);
+  }
+
+  .dark {
+    --color-background:  var(--color-dr-black);
+    --color-foreground:  var(--color-dr-white);
   }
 }
 
+
+
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-foreground);
+  background: var(--color-background);
 }
