@@ -1,6 +1,3 @@
-'use client'
-
-import Button from '@/components/button'
 import SearchInput from '@/components/search-input'
 import Image from 'next/image'
 
