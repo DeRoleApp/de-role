@@ -1,5 +1,6 @@
 import SearchInput from '@/components/search-input'
 import Image from 'next/image'
+import Footer from '@/components/footer/index'
 
 export default function Home() {
   const filterList = [
@@ -33,7 +34,16 @@ export default function Home() {
           Search
         </label>
         <SearchInput />
+
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          <main style={{ flex: 1 }}>
+            {/* para footer*/}
+           
+          </main>
+         
+        </div>
       </form>
+      <Footer />
     </section>
   )
 }
