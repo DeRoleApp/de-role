@@ -35,15 +35,8 @@ export default function Home() {
         </label>
         <SearchInput />
 
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-          <main style={{ flex: 1 }}>
-            {/* para footer*/}
-           
-          </main>
-         
-        </div>
+       
       </form>
-      <Footer />
     </section>
   )
 }
