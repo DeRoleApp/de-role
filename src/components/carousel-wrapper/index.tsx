@@ -3,7 +3,7 @@
 import Carousel from '../carousel'
 import Image from 'next/image'
 
-const CarouselTest = ({ title }) => (
+const CarouselTest = ({ title }: { title: string }) => (
   <div className="py-4">
     <h2 className="-mb-[25px] text-lg font-bold sm:-mb-7">{title}</h2>
     <Carousel.Root options={{}} arrows>
