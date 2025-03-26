@@ -11,7 +11,7 @@ const buttonVariants = cva(
         sm: 'h-9 px-4 [&_span]:text-sm'
       },
       color: {
-        white: 'bg-dr-white border border-dr-black',
+        white: 'bg-dr-white',
         yellow: 'bg-dr-yellow',
         black: 'bg-dr-black'
       },
@@ -28,7 +28,7 @@ const buttonVariants = cva(
         withAnimation: true,
         color: 'white',
         class:
-          '[&_.bubble]:bg-dr-black text-dr-black bg-dr-white hover:[&_span]:text-dr-white'
+          '[&_.bubble]:bg-dr-black text-dr-black bg-dr-white hover:[&_span]:text-dr-yellow'
       },
       {
         withAnimation: true,
@@ -40,7 +40,7 @@ const buttonVariants = cva(
         withAnimation: true,
         color: 'black',
         class:
-          '[&_.bubble]:bg-dr-yellow text-dr-yellow bg-dr-black hover:[&_span]:text-dr-black'
+          '[&_.bubble]:bg-dr-white text-dr-yellow bg-dr-black hover:[&_span]:text-dr-black'
       }
     ]
   }

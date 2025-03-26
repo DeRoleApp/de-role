@@ -1,35 +1,70 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '../button'
+import SearchInput from '../search-input'
+import ToggleMenu from './components/toggle-menu'
+import Menu from './components/menu'
+import Link from 'next/link'
 
 const Header = () => {
   return (
-    <header className="flex h-12 w-full items-center justify-between px-4 font-bold md:justify-around">
-      <div className="flex">
-        <div className="md:hidden">=</div>
-        <Image
-          src="logos/preto-amarelo.svg"
-          alt="Logo de rolé"
-          height={32}
-          width={113}
-        />
+    <header className="bg-dr-yellow fixed top-0 z-50 w-full">
+      <div className="bg-dr-yellow relative z-20 flex h-14 items-center justify-between gap-5 px-4 font-bold shadow-lg">
+        <div className="flex shrink-0">
+          <Link href="/" className="contents">
+            <picture className="relative aspect-[59/16] h-7 sm:h-9">
+              <Image src="logos/preto.svg" alt="Logo de rolé" fill />
+            </picture>
+          </Link>
+        </div>
+        <div className="hidden w-full sm:flex lg:w-[450px]">
+          <SearchInput />
+        </div>
+        <div className="flex h-8 shrink-0 items-center gap-3 text-xs md:gap-3">
+          <Button
+            text="Criar conta"
+            color="white"
+            withAnimation
+            className="hidden md:block"
+          />
+          <Button
+            text="Login"
+            color="black"
+            withAnimation
+            className="hidden sm:block"
+          />
+          {/* TODO: componentizar os svgs para poder trocar de cor no server side */}
+          <div className="relative">
+            <Image
+              src={'/icons/search.svg'}
+              alt="search icon"
+              width={22}
+              height={22}
+              className="sm:hidden"
+            />
+            <ToggleMenu type="search" />
+          </div>
+          <div className="relative">
+            <Image
+              src="icons/user.svg"
+              alt="user icon"
+              height={22}
+              width={22}
+              className="[&_svg]:fill-dr-yellow sm:hidden"
+            />
+            <ToggleMenu type="login" />
+          </div>
+          <div className="relative">
+            <Image
+              src="icons/menu.svg"
+              alt="menu icon"
+              height={22}
+              width={22}
+            />
+            <ToggleMenu type="links" />
+          </div>
+        </div>
       </div>
-      <div className="hidden items-center justify-center gap-8 text-sm md:flex">
-        <Link href={'/promotions'} className="cursor-pointer">
-          Promoções
-        </Link>
-        <Link href={''} className="cursor-pointer">
-          Fazer Check-in
-        </Link>
-        <Link href={''} className="cursor-pointer">
-          Para Empresas
-        </Link>
-      </div>
-      <div className="flex h-8 items-center gap-2 text-xs md:gap-4">
-        <Button text="Criar conta" color="white" withAnimation />
-        <Button text="Login" color="black" withAnimation />
-        <div>...</div>
-      </div>
+      <Menu />
     </header>
   )
 }
