@@ -16,7 +16,8 @@ export default async function RootLayout({
   children: React.ReactNode
 }>) {
   const cookieStore = await cookies()
-  const theme = cookieStore.get(THEME_COOKIE_NAME)?.value as Themes
+  const themeCookie = cookieStore.get(THEME_COOKIE_NAME)?.value as Themes
+  const theme = themeCookie || Themes.dark
 
   return (
     <html lang="en" className={cn('antialiased', montserrat.className)}>

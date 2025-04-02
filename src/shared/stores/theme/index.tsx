@@ -4,14 +4,16 @@ import { create } from 'zustand'
 
 type UseThemeStoreProps = {
   theme: Themes
-  setTheme: () => void
+  setTheme: (theme?: Themes) => void
 }
 
 export const useThemeStore = create<UseThemeStoreProps>((set) => ({
   theme: getCookie(THEME_COOKIE_NAME) as Themes,
-  setTheme: () =>
+  setTheme: (theme) =>
     set((store) => {
-      const newTheme = store.theme === Themes.dark ? Themes.light : Themes.dark
+      const isDark = store.theme === Themes.dark
+      const newTheme = theme || (isDark ? Themes.light : Themes.dark)
+
       setCookie(THEME_COOKIE_NAME, newTheme)
       return { theme: newTheme }
     })
