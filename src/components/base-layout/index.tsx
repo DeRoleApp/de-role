@@ -3,7 +3,7 @@
 import { useThemeStore } from '@/stores/theme'
 import Footer from '../footer'
 import Header from '../header'
-import { Themes } from '@/shared/constants'
+import { Themes } from '@/utils/constants'
 import { useEffect } from 'react'
 
 type BaseLayoutProps = {
