@@ -2,7 +2,7 @@
 
 import { Themes } from '@/shared/constants'
 import { cn } from '@/shared/helpers'
-import { useThemeStore } from '@/shared/stores/theme'
+import { useThemeStore } from '@/stores/theme'
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useThemeStore()

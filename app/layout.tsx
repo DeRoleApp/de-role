@@ -1,9 +1,9 @@
 import { Montserrat } from 'next/font/google'
 import './globals.css'
-import { cn } from '@/shared/helpers'
+import { cn } from '@/utils/helpers'
 import { cookies } from 'next/headers'
 import BaseLayout from '@/components/base-layout'
-import { THEME_COOKIE_NAME, Themes } from '@/shared/constants'
+import { THEME_COOKIE_NAME, Themes } from '@/utils/constants'
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',

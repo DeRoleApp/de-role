@@ -1,4 +1,4 @@
-import { Menus } from '@/shared/constants'
+import { Menus } from '@/utils/constants'
 import { create } from 'zustand'
 
 type UseMenuStoreProps = {

@@ -4,7 +4,7 @@ import SearchInput from '../search-input'
 import ToggleMenu from './components/toggle-menu'
 import Menu from './components/menu'
 import Link from 'next/link'
-import { Menus } from '@/shared/constants'
+import { Menus } from '@/utils/constants'
 
 const Header = () => {
   return (
