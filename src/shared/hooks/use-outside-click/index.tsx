@@ -1,3 +1,4 @@
+import { MENU_ICON_ID } from '@/shared/constants'
 import { RefObject, useEffect, useCallback } from 'react'
 
 const useOutsideClick = (
@@ -6,9 +7,16 @@ const useOutsideClick = (
 ) => {
   const handleClick = useCallback(
     (event: MouseEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        callback()
+      const target = event?.target as HTMLElement
+
+      if (
+        (ref.current && ref.current.contains(event.target as Node)) ||
+        target?.id === MENU_ICON_ID
+      ) {
+        return
       }
+
+      callback()
     },
     [callback, ref]
   )

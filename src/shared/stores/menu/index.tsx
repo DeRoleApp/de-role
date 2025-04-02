@@ -1,17 +1,16 @@
+import { Menus } from '@/shared/constants'
 import { create } from 'zustand'
 
-export type MenuType = 'links' | 'search' | 'login'
-
-type useMenuStoreProps = {
+type UseMenuStoreProps = {
   isOpen: boolean
   toggleMenu: () => void
-  type: MenuType
-  setType: (newType: MenuType) => void
+  type: Menus
+  setType: (newType: Menus) => void
 }
 
-export const useMenuStore = create<useMenuStoreProps>((set) => ({
+export const useMenuStore = create<UseMenuStoreProps>((set) => ({
   isOpen: false,
   toggleMenu: () => set((store) => ({ isOpen: !store.isOpen })),
-  type: 'links',
+  type: Menus.links,
   setType: (newType) => set(() => ({ type: newType }))
 }))

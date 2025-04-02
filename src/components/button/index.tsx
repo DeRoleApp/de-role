@@ -28,19 +28,19 @@ const buttonVariants = cva(
         withAnimation: true,
         color: 'white',
         class:
-          '[&_.bubble]:bg-dr-black text-dr-black bg-dr-white hover:[&_span]:text-dr-yellow'
+          '[&_.bubble]:bg-dr-black text-dr-black lg:bg-dr-white lg:hover:[&_span]:text-dr-yellow'
       },
       {
         withAnimation: true,
         color: 'yellow',
         class:
-          '[&_.bubble]:bg-dr-black text-dr-black bg-dr-yellow hover:[&_span]:text-dr-yellow'
+          '[&_.bubble]:bg-dr-black text-dr-black lg:bg-dr-yellow lg:hover:[&_span]:text-dr-yellow'
       },
       {
         withAnimation: true,
         color: 'black',
         class:
-          '[&_.bubble]:bg-dr-white text-dr-yellow bg-dr-black hover:[&_span]:text-dr-black'
+          '[&_.bubble]:bg-dr-white text-dr-yellow lg:bg-dr-black lg:hover:[&_span]:text-dr-black'
       }
     ]
   }
@@ -66,7 +66,7 @@ const Button = ({
       <span>{text}</span>
       {withAnimation && (
         <>
-          <div className="absolute inset-0 overflow-hidden pt-4">
+          <div className="absolute inset-0 hidden overflow-hidden pt-4 lg:block">
             <div className="bubble -left-[5%]"></div>
             <div className="bubble left-[30%] delay-100"></div>
             <div className="bubble left-[66%] delay-70"></div>

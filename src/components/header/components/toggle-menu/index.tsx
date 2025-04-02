@@ -1,8 +1,9 @@
 'use client'
 
-import { MenuType, useMenuStore } from '@/shared/hooks/use-menu-store'
+import { MENU_ICON_ID, Menus } from '@/shared/constants'
+import { useMenuStore } from '@/shared/stores/menu'
 
-type ToggleMenuProps = { type: MenuType }
+type ToggleMenuProps = { type: Menus }
 
 const ToggleMenu = ({ type }: ToggleMenuProps) => {
   const { toggleMenu, setType, isOpen, type: menuType } = useMenuStore()
@@ -16,6 +17,7 @@ const ToggleMenu = ({ type }: ToggleMenuProps) => {
 
   return (
     <div
+      id={MENU_ICON_ID}
       className="absolute top-0 size-full cursor-pointer bg-transparent"
       onClick={handleClick}
     />

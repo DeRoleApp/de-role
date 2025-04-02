@@ -7,7 +7,13 @@ type SearchInputProps = ComponentProps<'div'>
 
 const SearchInput = ({ className, ...props }: SearchInputProps) => {
   return (
-    <div className={cn('relative w-full', className)} {...props}>
+    <div
+      className={cn(
+        'dark:bg-dr-black dark:text-dr-white bg-dr-white relative flex w-full rounded-full',
+        className
+      )}
+      {...props}
+    >
       <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
         <Image
           src={'/icons/search.svg'}
@@ -18,16 +24,22 @@ const SearchInput = ({ className, ...props }: SearchInputProps) => {
       </div>
       <input
         type="search"
-        className="bg-dr-white text-dr-black block w-full rounded-full border border-gray-300 px-4 py-3 ps-10 text-xs shadow outline-none"
-        placeholder="Procure por bares, restaurantes..."
+        className="text-dr-black dark:text-dr-white dark:placeholder-dr-white/70 dark:border-r-dr-white/30 placeholder-dr-black/70 my-2 block w-full border-r py-1 pr-1 pl-10 text-xs font-medium outline-none"
+        placeholder="Bares, Restaurantes, Eventos..."
+        required
+      />
+      <input
+        type="search"
+        className="text-dr-black placeholder-dr-black/70 dark:placeholder-dr-white/70 dark:text-dr-white block w-full rounded-full border-none pr-24 pl-2 text-xs font-medium outline-none"
+        placeholder="Localização"
         required
       />
       <Button
         text="Buscar"
-        color="yellow"
+        color="black"
         size={'xs'}
         withAnimation
-        className="absolute end-1.5 bottom-1.5"
+        className="[&_.bubble]:bg-dr-yellow dark:[&_.bubble]:bg-dr-white dark:bg-dr-yellow text-dr-yellow bg-dr-black lg:hover:[&_span]:text-dr-black dark:text-dr-black absolute end-1.5 bottom-1.5"
       />
     </div>
   )

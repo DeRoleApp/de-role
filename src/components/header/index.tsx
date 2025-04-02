@@ -4,6 +4,7 @@ import SearchInput from '../search-input'
 import ToggleMenu from './components/toggle-menu'
 import Menu from './components/menu'
 import Link from 'next/link'
+import { Menus } from '@/shared/constants'
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
             </picture>
           </Link>
         </div>
-        <div className="hidden w-full sm:flex lg:w-[450px]">
+        <div className="hidden w-full sm:flex lg:w-[550px]">
           <SearchInput />
         </div>
         <div className="flex h-8 shrink-0 items-center gap-3 text-xs md:gap-3">
@@ -41,7 +42,7 @@ const Header = () => {
               height={22}
               className="sm:hidden"
             />
-            <ToggleMenu type="search" />
+            <ToggleMenu type={Menus.search} />
           </div>
           <div className="relative">
             <Image
@@ -51,7 +52,7 @@ const Header = () => {
               width={22}
               className="[&_svg]:fill-dr-yellow sm:hidden"
             />
-            <ToggleMenu type="login" />
+            <ToggleMenu type={Menus.login} />
           </div>
           <div className="relative">
             <Image
@@ -60,7 +61,7 @@ const Header = () => {
               height={22}
               width={22}
             />
-            <ToggleMenu type="links" />
+            <ToggleMenu type={Menus.links} />
           </div>
         </div>
       </div>
