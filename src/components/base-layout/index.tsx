@@ -1,6 +1,6 @@
 'use client'
 
-import { useThemeStore } from '@/shared/stores/theme'
+import { useThemeStore } from '@/stores/theme'
 import Footer from '../footer'
 import Header from '../header'
 import { Themes } from '@/shared/constants'

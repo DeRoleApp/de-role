@@ -1,4 +1,4 @@
-import { THEME_COOKIE_NAME, Themes } from '@/shared/constants'
+import { THEME_COOKIE_NAME, Themes } from '@/utils/constants'
 import { getCookie, setCookie } from 'cookies-next'
 import { create } from 'zustand'
 

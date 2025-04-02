@@ -2,7 +2,7 @@
 
 import SearchInput from '@/components/search-input'
 import { cn } from '@/shared/helpers'
-import { useMenuStore } from '@/shared/stores/menu'
+import { useMenuStore } from '@/stores/menu'
 import useOutsideClick from '@/shared/hooks/use-outside-click'
 import Link from 'next/link'
 import { useRef } from 'react'
