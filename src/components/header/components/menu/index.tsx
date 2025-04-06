@@ -1,9 +1,9 @@
 'use client'
 
 import SearchInput from '@/components/search-input'
-import { cn } from '@/shared/helpers'
+import { cn } from '@/utils/helpers'
 import { useMenuStore } from '@/stores/menu'
-import useOutsideClick from '@/shared/hooks/use-outside-click'
+import useOutsideClick from '@/utils/hooks/use-outside-click'
 import Link from 'next/link'
 import { useRef } from 'react'
 

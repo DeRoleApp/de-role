@@ -5,6 +5,7 @@ import ToggleMenu from './components/toggle-menu'
 import Menu from './components/menu'
 import Link from 'next/link'
 import { Menus } from '@/utils/constants'
+import Icon from '../icon'
 
 const Header = () => {
   return (
@@ -33,34 +34,19 @@ const Header = () => {
             withAnimation
             className="hidden sm:block"
           />
-          {/* TODO: componentizar os svgs para poder trocar de cor no server side */}
           <div className="relative">
-            <Image
-              src={'/icons/search.svg'}
-              alt="search icon"
-              width={22}
-              height={22}
-              className="sm:hidden"
+            <Icon
+              name="search"
+              className="fill-dr-black size-[22px] sm:hidden"
             />
             <ToggleMenu type={Menus.search} />
           </div>
           <div className="relative">
-            <Image
-              src="icons/user.svg"
-              alt="user icon"
-              height={22}
-              width={22}
-              className="[&_svg]:fill-dr-yellow sm:hidden"
-            />
+            <Icon name="user" className="fill-dr-black size-[22px] sm:hidden" />
             <ToggleMenu type={Menus.login} />
           </div>
           <div className="relative">
-            <Image
-              src="icons/menu.svg"
-              alt="menu icon"
-              height={22}
-              width={22}
-            />
+            <Icon name="menu" className="fill-dr-black size-[22px]" />
             <ToggleMenu type={Menus.links} />
           </div>
         </div>

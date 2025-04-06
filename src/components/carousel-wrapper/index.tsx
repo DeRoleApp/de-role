@@ -30,9 +30,8 @@ const CarouselTest = ({ title }: { title: string }) => (
 const CarouselWrapper = () => (
   <section className="py-5">
     <CarouselTest title={'Bares'} />
-    <CarouselTest title={'Bares'} />
-    <CarouselTest title={'Bares'} />
-    <CarouselTest title={'Bares'} />
+    <CarouselTest title={'Restaurantes'} />
+    <CarouselTest title={'Eventos'} />
   </section>
 )
 

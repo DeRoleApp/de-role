@@ -1,4 +1,4 @@
-import { cn } from '@/shared/helpers'
+import { cn } from '@/utils/helpers'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { ComponentProps } from 'react'
 

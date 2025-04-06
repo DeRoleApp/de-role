@@ -1,7 +1,7 @@
 'use client'
 
-import { Themes } from '@/shared/constants'
-import { cn } from '@/shared/helpers'
+import { Themes } from '@/utils/constants'
+import { cn } from '@/utils/helpers'
 import { useThemeStore } from '@/stores/theme'
 
 const ThemeToggle = () => {

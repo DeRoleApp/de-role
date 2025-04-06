@@ -3,8 +3,9 @@
 import { ComponentProps, KeyboardEvent, useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaOptionsType } from 'embla-carousel'
-import { cn } from '@/shared/helpers'
+import { cn } from '@/utils/helpers'
 import Image from 'next/image'
+import Icon from '../icon'
 
 type CarouselRootProps = ComponentProps<'div'> & {
   options?: EmblaOptionsType
@@ -87,14 +88,10 @@ const Item = ({ children, className, ...props }: CarouselItemProps) => (
 const Arrows = ({ callbacks, ...props }: ArrowsProps) => (
   <div className="flex justify-end gap-2 pb-3" {...props}>
     <button className="embla__prev" onClick={callbacks.prev}>
-      <picture className="relative block size-5 rotate-180 sm:size-6">
-        <Image src={'/icons/arrow.svg'} fill alt={'previous arrow icon'} />
-      </picture>
+      <Icon name="arrow" className="size-5 rotate-180 sm:size-6" />
     </button>
     <button className="embla__next" onClick={callbacks.next}>
-      <picture className="relative block size-5 sm:size-6">
-        <Image src={'/icons/arrow.svg'} fill alt={'next arrow icon'} />
-      </picture>
+      <Icon name="arrow" className="size-5 sm:size-6" />
     </button>
   </div>
 )

@@ -1,7 +1,8 @@
-import { cn } from '@/shared/helpers'
+import { cn } from '@/utils/helpers'
 import Button from '../button'
 import Image from 'next/image'
 import { ComponentProps } from 'react'
+import Icon from '../icon'
 
 type SearchInputProps = ComponentProps<'div'>
 
@@ -15,11 +16,9 @@ const SearchInput = ({ className, ...props }: SearchInputProps) => {
       {...props}
     >
       <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
-        <Image
-          src={'/icons/search.svg'}
-          alt="search icon"
-          width={18}
-          height={18}
+        <Icon
+          name="search"
+          className="fill-dr-black dark:fill-dr-yellow size-[18px]"
         />
       </div>
       <input

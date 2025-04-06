@@ -1,4 +1,4 @@
-import { MENU_ICON_ID } from '@/shared/constants'
+import { MENU_ICON_ID } from '@/utils/constants'
 import { RefObject, useEffect, useCallback } from 'react'
 
 const useOutsideClick = (

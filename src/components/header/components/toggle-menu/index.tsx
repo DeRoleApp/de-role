@@ -1,6 +1,6 @@
 'use client'
 
-import { MENU_ICON_ID, Menus } from '@/shared/constants'
+import { MENU_ICON_ID, Menus } from '@/utils/constants'
 import { useMenuStore } from '@/stores/menu'
 
 type ToggleMenuProps = { type: Menus }
