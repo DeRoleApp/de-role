@@ -1,4 +1,4 @@
-import CarouselWrapper from '@/components/carousel-wrapper'
+import CarouselWrapper from '@/templates/home/components/carousel-wrapper'
 import Card from './components/card'
 
 const Home = () => {

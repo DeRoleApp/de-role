@@ -4,7 +4,6 @@ import { ComponentProps, KeyboardEvent, useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaOptionsType } from 'embla-carousel'
 import { cn } from '@/utils/helpers'
-import Image from 'next/image'
 import Icon from '../icon'
 
 type CarouselRootProps = ComponentProps<'div'> & {
@@ -21,7 +20,7 @@ type ArrowsProps = ComponentProps<'div'> & {
   }
 }
 
-const Root = ({
+export const Root = ({
   children,
   className,
   arrows,
@@ -76,7 +75,7 @@ const Root = ({
   )
 }
 
-const Item = ({ children, className, ...props }: CarouselItemProps) => (
+export const Item = ({ children, className, ...props }: CarouselItemProps) => (
   <div
     className={cn('embla__slide min-w-0 shrink-0 grow-0', className)}
     {...props}
@@ -95,7 +94,3 @@ const Arrows = ({ callbacks, ...props }: ArrowsProps) => (
     </button>
   </div>
 )
-
-const Carousel = { Root, Item }
-
-export default Carousel
