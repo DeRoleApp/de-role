@@ -21,7 +21,9 @@ const BaseLayout = ({ initialTheme, children }: BaseLayoutProps) => {
   return (
     <body className={theme || initialTheme}>
       <Header />
-      <main className="relative px-4 pt-14 pb-10">{children}</main>
+      <main className="relative mx-auto max-w-[1440px] px-4 pt-32 pb-10">
+        {children}
+      </main>
       <Footer />
     </body>
   )

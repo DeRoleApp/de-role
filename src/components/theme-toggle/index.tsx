@@ -10,7 +10,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme()}
-      className="dark:bg-dr-black grid size-12 place-items-center items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-500"
+      className="bg-dr-black dark:bg-dr-yellow grid size-7 place-items-center items-center justify-center rounded-full shadow-lg transition-transform duration-500 [&_svg]:size-4"
     >
       <div
         className={cn(
@@ -19,9 +19,7 @@ const ThemeToggle = () => {
         )}
       >
         <svg
-          height="28"
-          width="28"
-          fill="var(--color-dr-yellow)"
+          fill="var(--color-dr-black)"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -35,9 +33,7 @@ const ThemeToggle = () => {
         )}
       >
         <svg
-          height="28"
-          width="28"
-          fill="currentColor"
+          fill="var(--color-dr-white)"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

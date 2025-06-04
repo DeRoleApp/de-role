@@ -10,36 +10,33 @@ const SearchInput = ({ className, ...props }: SearchInputProps) => {
   return (
     <div
       className={cn(
-        'dark:bg-dr-black dark:text-dr-white bg-dr-white relative flex w-full rounded-full',
+        'bg-dr-white relative flex h-7 w-full rounded-full lg:h-8',
         className
       )}
       {...props}
     >
       <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
-        <Icon
-          name="search"
-          className="fill-dr-black dark:fill-dr-yellow size-[18px]"
-        />
+        <Icon name="search" className="fill-dr-black size-[18px]" />
       </div>
       <input
         type="search"
-        className="text-dr-black dark:text-dr-white dark:placeholder-dr-white/70 dark:border-r-dr-white/30 placeholder-dr-black/70 my-2 block w-full border-r py-1 pr-1 pl-10 text-xs font-medium outline-none"
-        placeholder="Bares, Restaurantes, Eventos..."
+        className="text-dr-black placeholder-dr-black/70 my-1 block w-full py-1 pr-1 pl-10 text-xs font-medium outline-none lg:my-2"
+        placeholder="Busque o rolé de hoje"
         required
       />
-      <input
+      {/* <input
         type="search"
-        className="text-dr-black placeholder-dr-black/70 dark:placeholder-dr-white/70 dark:text-dr-white block w-full rounded-full border-none pr-24 pl-2 text-xs font-medium outline-none"
+        className="text-dr-black placeholder-dr-black/70 block w-full rounded-full border-none pr-24 pl-2 text-xs font-medium outline-none"
         placeholder="Localização"
         required
-      />
-      <Button
+      /> */}
+      {/* <Button
         text="Buscar"
-        color="black"
+        color="yellow"
         size={'xs'}
         withAnimation
-        className="[&_.bubble]:bg-dr-yellow dark:[&_.bubble]:bg-dr-white dark:bg-dr-yellow text-dr-yellow bg-dr-black lg:hover:[&_span]:text-dr-black dark:text-dr-black absolute end-1.5 bottom-1.5"
-      />
+        className="absolute end-1.5 bottom-1.5"
+      /> */}
     </div>
   )
 }
